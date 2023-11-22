@@ -5,7 +5,7 @@ var nodemailer = require('nodemailer');
 
 var app = express();
 var server = http.Server(app);
-var port = 5000;
+var port = process.env.PORT || 5000
 
 app.set("port", port);
 app.use(express.json());
