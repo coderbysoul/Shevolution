@@ -1,0 +1,615 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+    color: #3f3981; 
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #3f3981;
+    position: relative;
+  }
+  
+ 
+.nav > .nav-header {
+    display: inline;
+    align-items: center; 
+}
+
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px; 
+}
+
+.nav > .nav-header > .nav-title > a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+     
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: #3f3981;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #3f3981;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      text-align: center;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+      z-index:3;
+      
+    }
+  }
+
+/* Gold background */
+.section-gold {
+    background: #f9ac40;
+    color: #3f3981; 
+}
+
+/* White background */
+.section-white {
+    background: #fff;
+    color: #3f3981; 
+}
+
+.section-violet {
+    background-color:#3f3981;
+    color:#fff
+}
+
+.header-bg {
+    background-image: url('./assets/cover_image.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: 600px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3981;
+   
+}
+
+.header-bg::before {
+    content: "";
+    background-color: #3f3981; 
+    opacity: 0.6; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff; 
+    padding: 20px; 
+}
+.header-content h1 {
+    font-size: 3em; 
+}
+
+.header-content p {
+    font-size: 1.2em; 
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f9ac40; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+}
+
+.explore-button:hover {
+    background-color: #e19836; 
+}
+
+/* Styling for the "Who Are We" section */
+.about-us-section {
+    background: linear-gradient(45deg, #f9ac40, #e19836); 
+    color: #3f3981; 
+    padding: 50px;
+    text-align: center;
+    border: 2px solid #e19836; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    animation: gradientAnimation 5s ease infinite alternate;
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-top: -20px;
+    z-index:4;
+    position: relative;
+   
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.about-us-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+}
+
+.about-us-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-us-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about-us-text {
+    max-width: 60%; 
+}
+
+.our-programs-section {
+    background-color: #fff; 
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.programs-header {
+    margin-bottom: 30px;
+}
+
+.programs-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+    
+}
+
+.programs-description {
+    color: #f9ac40; 
+    max-width: 600px; 
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.program-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.program-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover {
+    transform: scale(1.05);
+}
+
+.violet-bg {
+    background-color: #3f3981; 
+    color: #fff; 
+}
+
+.yellow-bg {
+    background-color: #f9ac40; 
+    color: #3f3981; 
+}
+
+
+.our-mentors-section {
+    background-color: #fff; 
+    margin-left:-20px;
+    margin-right: -20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0; 
+    
+}
+
+
+
+.wave-svg {
+  
+    height: 100px; 
+    width: 100%;
+}
+
+.mentors-header {
+    margin-bottom: 30px;
+;
+}
+
+.mentors-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+    
+}
+
+.mentors-description {
+    color: #e19836; 
+    max-width: 600px; 
+    margin: 0 auto;
+    text-align: left;
+    font-size: 25px;
+}
+
+.mentors-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative; 
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+   
+}
+
+.mentor-card {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+   
+}
+
+.mentor-card:hover {
+    transform: scale(1.05);
+}
+
+.mentor-image img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; 
+}
+
+.mentor-details {
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    margin-top: -10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3f3981; 
+    text-decoration: none;
+   
+}
+
+.linkedin-link i {
+    margin-right: 5px;
+   
+}
+
+.past-events-section {
+   
+    padding: 50px;
+    text-align: center;
+}
+
+.events-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.events-cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-card {
+    width: calc(33.33% - 20px); 
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color:#3f3981;
+    color: white;
+    text-align: justify;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.event-images img {
+    width: 48%; 
+    border-radius: 10px;
+}
+
+/* Contact Us Section Styles */
+.contact-us {
+    text-align: center;
+    background-color:#3f3981;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 1.5em;
+    color: #f9ac40;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    color: #f9ac40;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #3f3981;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline-color: #f9ac40; /* Change this to the desired color */
+    outline-width: 2px; /* You can adjust the width */
+    outline-style: solid;
+}
+
+
+.contact-form input[type="submit"] {
+    background-color: #f9ac40;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #e19836;
+}
+
+/* Join Us Section Styles */
+.join-us-section {
+    background-color: #3f3981;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.join-us-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #f9ac40;
+   
+}
+
+.contact-form,
+.join-us-right {
+    width: 48%;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-us {
+    text-align: center;
+}
+
+.join-us-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.join-us-form,
+.social-icons {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #f9ac40;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e19836;
+}
+
+.google-form-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f9ac40; /* Yellow background */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.google-form-link:hover {
+    background-color:#e19836;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    width: 48%; /* Adjust as needed for spacing */
+    display: flex;
+    align-items: center;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.icon i {
+    color: #f9ac40;
+}
+
+.icon:hover {
+    transform: scale(1.2); 
+}
+
+footer {
+    background-color: #e19836;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
